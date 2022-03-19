@@ -8,12 +8,14 @@ import { QuestionsComponent } from './questions/questions.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     QuestionsComponent,
-    HeaderComponent
+    HeaderComponent,
+    PagenotFoundComponent
   ],
   imports: [
     BrowserModule,
