@@ -1,3 +1,4 @@
+import { QuestionsComponent } from './../questions/questions.component';
 import { QuestionService } from './../service/question.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -28,6 +29,7 @@ export class SignUpComponent implements OnInit {
     .subscribe((item) => {
       localStorage.setItem('questions',JSON.stringify(item));
     });
-    this.router.navigate(['questions']);
+    this.router.navigate(['/questions']);
+
   }
 }

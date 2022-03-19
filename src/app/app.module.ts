@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
+import { ChangebgDirective } from './directive/changebg.directive';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     QuestionsComponent,
     HeaderComponent,
-    PagenotFoundComponent
+    PagenotFoundComponent,
+    ChangebgDirective
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ChangebgDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
