@@ -1,3 +1,5 @@
+import { QuestionService } from './../service/question.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+
+  singUpEmail:string='';
+
+  constructor(
+    private router:Router,
+    private questionService:QuestionService
+    ) { }
 
   ngOnInit(): void {
   }
+  signUP(){
 
+    //add store email && question to localstorage from .json
+    localStorage.setItem("email",this.singUpEmail);
+
+    this.questionService.getQuestionInAssets()
+    .subscribe((item) => {
+      localStorage.setItem('questions',JSON.stringify(item));
+    });
+    this.router.navigate(['questions']);
+  }
 }

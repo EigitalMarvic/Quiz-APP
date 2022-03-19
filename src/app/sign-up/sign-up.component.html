@@ -1,1 +1,45 @@
-<p>sign-up works!</p>
+<div class="p-5">
+  <div class="container">
+      <h1 class="display-3">Welcome!</h1>
+      <p class="lead">You can test your Bootstrap skills with Bootstrap Wiz.</p>
+      <hr class="my-2">
+      <h4>The Test</h4>
+      <p>The test contains 5 questions and there is 15 Seconds time limit for each question.</p>
+      <p>The test is not official, it's just a nice way to see how much you know, or don't know, about Bootstrap.</p>
+      <h4>Count Your Score</h4>
+      <p>You will get 100 points for each correct answer. At the end of the Quiz, your total score will be displayed.
+          Maximum score is 500 points.</p>
+          <form #myForm="ngForm" (ngSubmit)="signUP()" autocomplete="off" >
+          <div class="form-group">
+            <label for="emailAddress">Email address</label>
+            <input
+            required
+            email
+            ngModel name="emailAddress"
+            type="text" id="emailAddress"
+            class="form-control"
+            #emailAddress="ngModel"
+            [(ngModel)]="singUpEmail"
+            style="width: auto;"
+
+            />
+        </div>
+        <small *ngIf="emailAddress?.errors
+        && emailAddress.errors?.['required']
+        && emailAddress.touched">
+        Email Address is Required</small>
+
+        <small *ngIf="emailAddress?.errors &&
+        emailAddress.errors?.['email'] &&
+        emailAddress.touched">
+        Email Should be Valid</small>
+      <p class="lead">
+
+          <!-- <a class="btn btn-primary btn-lg"
+          role="button" type="submit" (click)="signUP()">SignUp</a> -->
+          <button type="submit" class="btn btn-primary mt-3"
+          [disabled]="!myForm.valid">signup</button>
+      </p>
+          </form>
+  </div>
+</div>
