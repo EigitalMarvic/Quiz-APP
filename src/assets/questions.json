@@ -1,0 +1,90 @@
+[{
+  "ID": 1,
+  "questionText": "Which class provides a responsive fixed width container?",
+  "options":
+   [
+      {"text": ".container-fluid"},
+      {"text": ".container-fixed"},
+      { "text": ".container","correct": true},
+      {"text": "-container"}
+   ],
+  "explanation": ".container"
+},
+{
+  "ID": 2,
+  "questionText": "Which class provides a full width container, spanning the entire width of the viewport?",
+  "options": [{
+          "text": ".container-fluid",
+          "correct": true
+      },
+      {
+          "text": ".container-fixed"
+      },
+      {
+          "text": ".container"
+      },
+      {
+          "text": ".container-float"
+      }
+  ],
+  "explanation": ".container-fluid"
+},
+{
+  "ID": 3,
+  "questionText": "The Bootstrap grid system is based on how many columns?",
+  "options": [{
+          "text": "6."
+      },
+      {
+          "text": "12",
+          "correct": true
+      },
+      {
+          "text": "11"
+      },
+      {
+          "text": "9"
+      }
+  ],
+  "explanation": "12"
+},
+{
+  "ID": 4,
+  "questionText": " Which class adds zebra-stripes to a table?",
+  "options": [{
+          "text": ".table-striped",
+          "correct": true
+      },
+      {
+          "text": ".table-bordered"
+
+      },
+      {
+          "text": ".table-zebra"
+      },
+      {
+          "text": ".even and .odd"
+      }
+  ],
+  "explanation": ".table-striped"
+},
+{
+  "ID": 5,
+  "questionText": "Which class shapes an image to a circle?",
+  "options": [{
+          "text": ".img-circle",
+          "correct": true
+      },
+      {
+          "text": ".img-rounded"
+      },
+      {
+          "text": ".img-round"
+      },
+      {
+          "text": ".img-thumbnail"
+      }
+  ],
+  "explanation": ".img-circle"
+}
+]

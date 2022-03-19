@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class QuestionService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+
+  getQuestionInAssets(){
+    return this.http.get<any>("/assets/questions.json");
+  }
 }
